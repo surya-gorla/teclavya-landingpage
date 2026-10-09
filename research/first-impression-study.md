@@ -1,6 +1,6 @@
 # Teclavya first-impression study — field protocol
 
-**Status: ready to run; no human participants have been tested yet.** This protocol evaluates comprehension and discoverability, not conversion uplift or statistical significance.
+**Status: ready to run; no human participants have been tested yet.** The moderator should **not** announce the exact five-second exposure duration in advance, to avoid changing how participants scan. This protocol evaluates comprehension and discoverability, not conversion uplift or statistical significance.
 
 ## Source-grounded objective
 
@@ -18,7 +18,7 @@ Recruit **8–12 prospective students** who have not worked on Teclavya and are 
 
 ## Moderator script (read verbatim)
 
-> I will show you two website homepages for five seconds each, one at a time. There are no right answers and I am testing the page, not you. After each, I will hide it and ask what you understood. Please answer from memory, without trying to be helpful to the designers. After that, you can interact with each page briefly. You do not need to register.
+> I'll show you two website homepages briefly, one at a time. There are no right answers and I am testing the page, not you. After each, I will hide it and ask what you understood. Please answer from memory, without trying to be helpful to the designers. After that, you can interact with each page briefly. You do not need to register.
 
 1. Open the assigned first homepage at the top, at 100% browser zoom. Preload to avoid counting network time. Show the first fold for **five seconds**, then hide it or switch to a blank tab before asking any questions. No scrolling or conversation during exposure.
 2. Ask the three questions below **without displaying answer choices or leading examples**. Write answers verbatim. Only after recording these answers should you expose the second page for five seconds and repeat. Do not let participants see one page's answers while viewing the other.
@@ -27,9 +27,9 @@ Recruit **8–12 prospective students** who have not worked on Teclavya and are 
 
 ### The three five-second questions
 
-1. **What do you think Teclavya helps a student achieve?**
+1. **What do you think this website helps someone do?**
 2. **What would you click first, and what do you expect to happen?**
-3. **What do you remember about the picture or graphic on the page?**
+3. **What stood out most to you?**
 
 Optional after interaction: **Did it require creating an account before you could try anything?**
 
