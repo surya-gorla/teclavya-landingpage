@@ -45,7 +45,7 @@ The guest career mapping is intentionally local to the preview. Integration into
 
 The first screen presents the outcome promise, a career selection control, and a visible interactive capability model. The primary CTA says **Try the 60-second check** and the adjacent copy emphasizes **three questions / no account required**. The user can then experience the complete five-stage journey.
 
-The palette follows `Teclavya/teclavya-web` authenticated design tokens in `src/index.css` and `src/styles/warm-theme.css`, rather than the separate dark public landing aesthetic. Original concept branding is retained and is not represented as the official Teclavya logo.
+The palette follows `Teclavya/teclavya-web` authenticated design tokens in `src/index.css` and `src/styles/warm-theme.css`, rather than the separate dark public landing aesthetic. The preview's header and footer use Teclavya's original logo from `Teclavya/teclavya-web`; the SVG favicon remains a provisional concept mark.
 
 ## Visual QA targets
 
@@ -60,7 +60,7 @@ Created as a standalone concept preview for discussion with the Teclavya team. P
 
 The standalone preview follows the authenticated Teclavya light design tokens rather than the CEO's separately certified dark *public* homepage. The main hero now leads with the exact career outcome in Issue #49 while the signature interactive blueprint remains. The 60-second diagnostic appears immediately after the hero, followed by a role-specific sample path; all results remain illustrative, not validated job-readiness claims. See `research/first-impression-study.md` for the prospective-student validation protocol. No student testing or conversion uplift is claimed.
 
-## V2: evidence-driven blueprint / hook refinement (local-only, not deployed)
+## V2: evidence-driven blueprint / hook refinement (review branch only; not deployed)
 
 V2 makes the three spatial layers semantically meaningful: **GOAL → CAPABILITIES → PRACTICE → EVIDENCE**. Six career definitions now update the selected skill, example workplace task, and corresponding reviewable artifact together. Narrow layouts use a compact horizontally scrollable five-skill strip with readable labels, not a scaled-down desktop diagram.
 
@@ -69,3 +69,8 @@ The primary diagnostic CTA preserves `#diagnostic` in browser history but positi
 See `research/role-id-crosswalk.md` for intentional slug aliases and incompatible pre-signup journey mapping in Teclavya Web. The standalone concept's existing six IDs remain unchanged.
 
 QA is packaged separately in `teclavya-blueprint-hook-v2` with screenshots and scripts. The 134 local browser assertions and computed-contrast checks do not constitute full axe/WCAG certification or human-participant evidence.
+
+
+### V2 branch handoff
+
+This V2 source is available at [`feature/landingpage-v2-review`](https://github.com/surya-gorla/teclavya-landingpage/tree/feature/landingpage-v2-review) for your local Codex agent to fetch. Only the review branch contains V2; `main` and the public GitHub Pages preview are unchanged. To review the changes, compare this branch against commit `547b0acf79374c369824166f1228bb12b5a06bf9` (the V1 baseline). Rerun local browser functionality, full axe accessibility checks, and logo/font loading before recommending a merge. Do not deploy or merge without approval.
