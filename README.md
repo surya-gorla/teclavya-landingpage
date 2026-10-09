@@ -54,3 +54,8 @@ Viewport checks: 1440px desktop, 768px tablet, 375px mobile. Verify hero copy do
 ## Attribution / review
 
 Created as a standalone concept preview for discussion with the Teclavya team. Product descriptions are conceptual and any code review, score, simulated project or credential shown is labeled illustrative.
+
+
+## Conversion and visual-fidelity refinements (2026-10-10)
+
+The standalone preview follows the authenticated Teclavya light design tokens rather than the CEO's separately certified dark *public* homepage. The main hero now leads with the exact career outcome in Issue #49 while the signature interactive blueprint remains. The 60-second diagnostic appears immediately after the hero, followed by a role-specific sample path; all results remain illustrative, not validated job-readiness claims. See `research/first-impression-study.md` for the prospective-student validation protocol. No student testing or conversion uplift is claimed.

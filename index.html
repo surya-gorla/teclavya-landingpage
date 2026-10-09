@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f8fafc" />
     <meta name="description" content="Teclavya — choose a career, map the skills, practice like an engineer, and build evidence that counts. An interactive landing-page concept." />
     <title>Teclavya — Your career, engineered.</title>
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/teclavya-logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet" />
@@ -19,9 +19,7 @@
       <header class="topbar" id="top">
         <div class="container topbar-inner">
           <a class="brand" href="#top" aria-label="Teclavya home">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 36 36" fill="none"><path d="M6 27.5V8.5H29.5" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M14 28V16H26" stroke="#6366F1" stroke-width="3.5" stroke-linejoin="round"/><path d="M21.5 27.5L29.5 19.5" stroke="currentColor" stroke-width="3.5" stroke-linecap="square"/></svg>
-            </span>
+            <span class="brand-mark" aria-hidden="true"><img class="brand-image" src="./assets/teclavya-logo.png" alt="" width="34" height="34" decoding="async" /></span>
             <span>Teclavya</span>
           </a>
           <nav class="desktop-nav" aria-label="Main navigation">
@@ -45,9 +43,9 @@
           <div class="hero-grain" aria-hidden="true"></div>
           <div class="container hero-inner">
             <div class="hero-copy">
-              <div class="eyebrow"><span class="eyebrow-line"></span> FROM STUDENT TO JOB-READY SOFTWARE ENGINEER</div>
-              <h1 id="hero-title">Your career,<br/><span class="gradient-word">engineered<span class="title-period">.</span></span></h1>
-              <p class="hero-lede">Choose the role you want. See the skills you need.<br/>Build proof through real engineering work.</p>
+              <div class="eyebrow"><span class="eyebrow-line"></span> YOUR CAREER, ENGINEERED THROUGH REAL WORK</div>
+              <h1 id="hero-title">From student to<br/><span class="gradient-word">job-ready</span><br/>software engineer<span class="title-period">.</span></h1>
+              <p class="hero-lede">Choose a role. Check your starting point.<br/>Build skills you can prove through real work.</p>
               <div class="choose-role-heading"><span>01</span> CHOOSE YOUR DIRECTION <span class="choose-role-rule"></span></div>
               <div class="role-controls" role="group" aria-label="Choose your target career">
                 <button type="button" class="role-chip is-selected" data-role="java-backend" aria-pressed="true"><span class="role-chip-dot"></span>Java backend</button>
@@ -105,28 +103,13 @@
             </div>
           </div>
           <div class="container hero-bottom">
-            <div class="hero-bottom-line"></div><span>FROM CAREER GOAL TO REAL-WORLD CAPABILITY.</span><a href="#journey" aria-label="Scroll to the journey">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
-          </div>
-        </section>
-
-        <section class="journey-section section-pad" id="journey" aria-labelledby="journey-title">
-          <div class="container">
-            <div class="section-intro reveal"><span class="section-kicker"><span class="kicker-square"></span> THE TECLAVYA WAY / 01—05</span><h2 id="journey-title">One direction.<br/><span class="muted-heading">Five connected moves.</span></h2><p>Everything you do builds toward what comes next.</p></div>
-            <div class="journey-rail reveal" id="journey-rail">
-              <div class="journey-connector" aria-hidden="true"></div>
-              <button class="journey-step active" type="button" data-step="0" aria-pressed="true"><span class="step-marker"><span class="step-symbol">◎</span></span><span class="step-num">01 / DIRECTION</span><strong>Choose</strong><span class="step-description">A role worth building toward</span></button>
-              <button class="journey-step" type="button" data-step="1" aria-pressed="false"><span class="step-marker"><span class="step-symbol">⊕</span></span><span class="step-num">02 / BASELINE</span><strong>Discover</strong><span class="step-description">Where you begin</span></button>
-              <button class="journey-step" type="button" data-step="2" aria-pressed="false"><span class="step-marker"><span class="step-symbol">⌘</span></span><span class="step-num">03 / ROADMAP</span><strong>Navigate</strong><span class="step-description">Your next best steps</span></button>
-              <button class="journey-step" type="button" data-step="3" aria-pressed="false"><span class="step-marker"><span class="step-symbol">{ }</span></span><span class="step-num">04 / WORK</span><strong>Build</strong><span class="step-description">Real engineering skills</span></button>
-              <button class="journey-step" type="button" data-step="4" aria-pressed="false"><span class="step-marker"><span class="step-symbol">◇</span></span><span class="step-num">05 / EVIDENCE</span><strong>Prove</strong><span class="step-description">What you can actually do</span></button>
-            </div>
-            <div class="journey-caption reveal" aria-live="polite"><span class="journey-caption-prefix">INSIDE THIS STAGE <span aria-hidden="true">↗</span></span><strong id="step-caption">Choose your target role. The path takes its shape.</strong><span class="journey-caption-count" id="step-caption-count">01 / 05</span></div>
+            <div class="hero-bottom-line"></div><span>FROM CAREER GOAL TO REAL-WORLD CAPABILITY.</span><a href="#diagnostic" aria-label="Scroll to the skill diagnostic">TRY THE SKILL CHECK <span aria-hidden="true">↓</span></a>
           </div>
         </section>
 
         <section class="diagnostic-section section-pad" id="diagnostic" aria-labelledby="diagnostic-title">
           <div class="container diagnostic-layout">
-            <div class="diagnostic-copy reveal"><span class="section-kicker"><span class="kicker-square mint-square"></span> YOUR STARTING POINT</span><h2 id="diagnostic-title">First, find<br/><span class="gradient-green">your baseline.</span></h2><p>Three questions. One clearer direction.</p><div class="diagnostic-meta"><span><span class="meta-ring"></span> ROLE-SPECIFIC</span><span><span class="meta-ring"></span> 60 SECONDS</span><span><span class="meta-ring"></span> NO SIGNUP</span></div><div class="section-index-mark">02<span>/ 05</span></div></div>
+            <div class="diagnostic-copy reveal"><span class="section-kicker"><span class="kicker-square mint-square"></span> 60-SECOND SKILL CHECK</span><h2 id="diagnostic-title">Find your<br/><span class="gradient-green">starting point.</span></h2><p>Three questions. Immediate feedback. No signup.</p><div class="diagnostic-meta"><span><span class="meta-ring"></span> ROLE-SPECIFIC</span><span><span class="meta-ring"></span> 60 SECONDS</span><span><span class="meta-ring"></span> NO SIGNUP</span></div><div class="section-index-mark">02<span>/ 05</span></div></div>
             <div class="quiz-panel reveal" id="quiz-panel">
               <div class="quiz-topbar"><span class="quiz-label"><span class="quiz-status-dot"></span> SKILL CHECK / LIVE</span><span class="quiz-step-label" id="quiz-step-label">QUESTION 01 OF 03</span></div>
               <div class="quiz-track-heading"><div><span class="quiz-small-label">YOUR SELECTED TRACK</span><h3 id="quiz-track-title">Java Backend Engineer</h3></div><button id="quiz-change-track" type="button" class="quiz-change-track">Change track ↗</button></div>
@@ -146,6 +129,21 @@
               <div class="roadmap-lane"><div class="lane-node"><span>02</span></div><div class="lane-body"><span class="lane-eyebrow">APPLY</span><h3>Practice like an engineer</h3><p id="lane-practice">Build and test a resilient REST API</p></div><span class="lane-symbol">↗</span></div>
               <div class="roadmap-lane"><div class="lane-node"><span>03</span></div><div class="lane-body"><span class="lane-eyebrow">DEMONSTRATE</span><h3>Turn work into evidence</h3><p>Project review · assessment · credential</p></div><span class="lane-symbol">◇</span></div>
             </div><div class="roadmap-console-footer"><span><span class="tiny-grid-mark">▦</span> ALWAYS A NEXT STEP</span><span>NO DEAD ENDS <span aria-hidden="true">↗</span></span></div></div>
+          </div>
+        </section>
+
+        <section class="journey-section section-pad" id="journey" aria-labelledby="journey-title">
+          <div class="container">
+            <div class="section-intro reveal"><span class="section-kicker"><span class="kicker-square"></span> THE TECLAVYA WAY / 01—05</span><h2 id="journey-title">One direction.<br/><span class="muted-heading">Five connected moves.</span></h2><p>Everything you do builds toward what comes next.</p></div>
+            <div class="journey-rail reveal" id="journey-rail">
+              <div class="journey-connector" aria-hidden="true"></div>
+              <button class="journey-step active" type="button" data-step="0" aria-pressed="true"><span class="step-marker"><span class="step-symbol">◎</span></span><span class="step-num">01 / DIRECTION</span><strong>Choose</strong><span class="step-description">A role worth building toward</span></button>
+              <button class="journey-step" type="button" data-step="1" aria-pressed="false"><span class="step-marker"><span class="step-symbol">⊕</span></span><span class="step-num">02 / BASELINE</span><strong>Discover</strong><span class="step-description">Where you begin</span></button>
+              <button class="journey-step" type="button" data-step="2" aria-pressed="false"><span class="step-marker"><span class="step-symbol">⌘</span></span><span class="step-num">03 / ROADMAP</span><strong>Navigate</strong><span class="step-description">Your next best steps</span></button>
+              <button class="journey-step" type="button" data-step="3" aria-pressed="false"><span class="step-marker"><span class="step-symbol">{ }</span></span><span class="step-num">04 / WORK</span><strong>Build</strong><span class="step-description">Real engineering skills</span></button>
+              <button class="journey-step" type="button" data-step="4" aria-pressed="false"><span class="step-marker"><span class="step-symbol">◇</span></span><span class="step-num">05 / EVIDENCE</span><strong>Prove</strong><span class="step-description">What you can actually do</span></button>
+            </div>
+            <div class="journey-caption reveal" aria-live="polite"><span class="journey-caption-prefix">INSIDE THIS STAGE <span aria-hidden="true">↗</span></span><strong id="step-caption">Choose your target role. The path takes its shape.</strong><span class="journey-caption-count" id="step-caption-count">01 / 05</span></div>
           </div>
         </section>
 
