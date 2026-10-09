@@ -1,0 +1,302 @@
+/*
+ * Teclavya — Living Career Blueprint / light presentation theme
+ * Source-aligned with Teclavya Web's authenticated dashboard:
+ *   src/index.css, src/styles/warm-theme.css, src/pages/Dashboard.css.
+ * Standalone preview only. Does not import or override the production app.
+ */
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --bg2: #f1f5fb;
+  --surface: #fff;
+  --surface2: #f4f6ff;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
+  --white: #0f172a;
+  --muted: #475569;
+  --dim: #64748b;
+  --mint: #6366f1;
+  --mint-dark: #4f46e5;
+  --lav: #7c3aed;
+  --lav-soft: #8b5cf6;
+  --brand-indigo: #6366f1;
+  --brand-violet: #7c3aed;
+  --brand-hover: #4f46e5;
+  --shadow-card: 0 18px 52px -24px rgba(59,65,112,.22),0 5px 18px rgba(99,102,241,.06);
+  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --display: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+}
+body { color: var(--white); background: var(--bg); }
+button:focus-visible, a:focus-visible, select:focus-visible { outline: 3px solid #6366f1; outline-offset: 3px; }
+::selection { background: #e0e7ff; color: #312e81; }
+
+/* Nav — clean and consistent with the authenticated shell. */
+.topbar { border-bottom: 1px solid #e2e8f0; background: rgba(255,255,255,.9); box-shadow: 0 3px 20px rgba(15,23,42,.035); }
+.brand { color:#0f172a; font-family:var(--display); font-weight:800; }
+.brand-mark { color:#1e293b; }
+.brand-dot { color: #6366f1; }
+.desktop-nav a { color:#475569; font-size:13px; font-weight:600; }
+.desktop-nav a:hover, .footer a:hover { color:#4f46e5; }
+.concept-pill { color:#64748b; }
+.pulse-dot, .connection-indicator, .quiz-status-dot, .signal-dot { background:#10b981; box-shadow:0 0 0 4px rgba(16,185,129,.13); }
+.nav-cta, .button-primary, .quiz-next:not(:disabled) { color:#fff; background: linear-gradient(135deg,#6366f1,#7c3aed); box-shadow: 0 9px 22px rgba(99,102,241,.18); border-radius:10px; }
+.nav-cta { min-height:44px; font-size:12px; }
+.nav-cta:hover, .button-primary:hover, .quiz-next:not(:disabled):hover { background:linear-gradient(135deg,#4f46e5,#6d28d9); box-shadow:0 12px 26px rgba(99,102,241,.24); }
+.mobile-menu-toggle span { background:#0f172a; }
+.mobile-nav { background:#fff; border-bottom:1px solid #e2e8f0; box-shadow:0 12px 25px rgba(15,23,42,.08); }
+.mobile-nav a { color:#334155; }
+
+/* The first five seconds: real career choice + physically layered capability model. */
+.hero { background:
+  radial-gradient(ellipse at 85% 18%,rgba(199,210,254,.50),transparent 45%),
+  radial-gradient(ellipse at 30% 83%,rgba(252,231,243,.30),transparent 43%),
+  linear-gradient(180deg,#fafcff 0%,#f8fafc 80%,#f3f6fe 100%);
+}
+.hero:before { background:linear-gradient(90deg,transparent calc(50% - .5px),rgba(99,102,241,.075) 50%,transparent calc(50% + .5px)); }
+.hero-grain { opacity:.48; background-image:radial-gradient(rgba(99,102,241,.15) .65px,transparent .7px); mask-image:linear-gradient(90deg,transparent 0%,black 65%,transparent 95%); }
+.eyebrow,.section-kicker { font-family:var(--sans); color:#4f46e5; letter-spacing:1.1px; font-size:11px; font-weight:800; }
+.eyebrow-line { width:30px; height:2px; background:#6366f1; }
+.hero h1 { color:#0f172a; font-family:var(--display); font-weight:800; letter-spacing:-.076em; font-size:clamp(63px,6.12vw,100px); }
+.gradient-word { background:linear-gradient(120deg,#4338ca 2%,#6366f1 48%,#8b5cf6 98%); -webkit-background-clip:text;background-clip:text; color:transparent; }
+.title-period { color:#7c3aed; -webkit-text-fill-color:#7c3aed; }
+.hero-lede { color:#475569; font-size:clamp(16px,1.38vw,19px); line-height:1.6; }
+.choose-role-heading { color:#475569; font-family:var(--sans);font-weight:750;letter-spacing:1.05px; }
+.choose-role-heading>span:first-child { color:#4f46e5; }
+.choose-role-rule { background:linear-gradient(90deg,#cbd5e1,transparent); }
+.role-chip { min-height:44px; background:#fff; border:1px solid #cbd5e1; border-radius:10px; color:#475569; box-shadow:0 2px 7px rgba(15,23,42,.025); font-size:12px; }
+.role-chip:hover { background:#f8faff; color:#4338ca; border-color:#a5b4fc; box-shadow:0 5px 13px rgba(99,102,241,.08); }
+.role-chip.is-selected { border-color:#818cf8; background:#eef2ff; color:#3730a3; box-shadow:0 0 0 2px rgba(99,102,241,.08),0 5px 18px rgba(99,102,241,.08); }
+.role-chip-dot { background:#cbd5e1; border-color:#cbd5e1; }
+.is-selected .role-chip-dot { background:#6366f1; border-color:#6366f1; box-shadow:0 0 0 3px #c7d2fe; }
+.role-more-menu { background:#fff; border:1px solid #dbe2ee; border-radius:12px; box-shadow:0 14px 38px rgba(15,23,42,.15); }
+.role-more-menu button { color:#334155; border-radius:8px; }
+.role-more-menu button:hover { color:#4338ca; background:#eef2ff; }
+.button { border-radius:10px; min-height:48px; }
+.button-primary { color:#fff; }
+.hero-link { color:#4338ca; }
+.hero-link:hover { color:#6d28d9; }
+.microcopy { color:#64748b; font-size:12px; }
+.micro-check { color:#059669; }
+.micro-separator { color:#cbd5e1; }
+.hero-bottom-line { background:linear-gradient(90deg,#cbd5e1,#e2e8f0,transparent); }
+.hero-bottom>span,.hero-bottom>a { color:#64748b; }
+.hero-bottom>a { color:#4338ca; }
+.hero-bottom>a span { color:#4f46e5; }
+
+/* Signature 2.5D model — warm white acrylic plates with blue/purple optical edges. */
+.scene-glow { background:radial-gradient(ellipse at 54% 52%,rgba(129,140,248,.21) 0%,rgba(196,181,253,.17) 39%,transparent 69%); filter:blur(22px); }
+.hero-visual:before { border-color:rgba(99,102,241,.09); }
+.hero-visual:after { background:linear-gradient(135deg,transparent 49.85%,rgba(99,102,241,.12) 50%,transparent 50.15%); }
+.scene-coordinate { color:#94a3b8; }
+.scene-coordinate-bottom span { color:#4f46e5; }
+.scene-plane { border-radius:18px; }
+.scene-plane-back { background:linear-gradient(145deg,#e0e7ff 0%,#fff 68%,#f1f5ff 100%);border:1px solid rgba(99,102,241,.25);box-shadow:0 22px 40px rgba(61,64,132,.12); }
+.scene-plane-middle { background:linear-gradient(145deg,#ebe9ff,#f5f4ff 60%,#e9efff); border:1px solid rgba(124,58,237,.22); box-shadow:0 16px 44px rgba(99,102,241,.11); }
+.scene-plane-middle>span,.back-topline { color:#6d5da5; }
+.back-pills span { color:#6366f1; background:#fff; border:1px solid #c7d2fe; }
+.back-traces path { stroke:#818cf8; }
+.practice-ticks i { background:#c4b5fd; }
+.practice-ticks i:nth-child(-n+3) { background:#818cf8; }
+.scene-plane-main { background:radial-gradient(circle at 50% 47%,rgba(224,231,255,.72) 0%,rgba(255,255,255,.96) 65%),linear-gradient(135deg,#fff,#f8faff); border:1px solid #c5d0f5; box-shadow:0 28px 62px -22px rgba(67,56,202,.28),0 8px 20px rgba(30,41,59,.07),inset 0 1px 0 #fff; }
+.scene-topline { border-bottom:1px solid #e6eafa; }
+.scene-tag { color:#475569; }
+.scene-index { color:#64748b; }
+.mini-orbit { border-color:#6366f1; }
+.mini-orbit:after { background:#6366f1; }
+.scene-grid { background-image:linear-gradient(to right,rgba(99,102,241,.075) 1px,transparent 1px),linear-gradient(to bottom,rgba(99,102,241,.075) 1px,transparent 1px); }
+.circuit-lines { opacity:.65; }
+.circuit-lines path { stroke:#818cf8;stroke-width:1.65; }
+.core-orbit { border-color:rgba(99,102,241,.19); }
+.orbit-outer { border-color:rgba(99,102,241,.20); }
+.orbit-inner { border-color:rgba(139,92,246,.16);box-shadow:0 0 44px rgba(129,140,248,.09); }
+.role-core { background:linear-gradient(145deg,#6366f1,#7c3aed); border:1px solid #5b5bd6; box-shadow:0 14px 29px rgba(99,102,241,.27); }
+.role-core:before { background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.035)); }
+.core-glyph { color:#fff; }
+.core-abbrev { color:#ddd6fe; }
+.skill-node { background:#fff; border:1px solid #d1d9ee; border-radius:9px; box-shadow:0 8px 20px rgba(71,85,130,.10),inset 0 1px 0 rgba(255,255,255,.95); }
+.skill-node:hover,.skill-node.is-active { background:#eef2ff; border-color:#818cf8; box-shadow:0 12px 20px rgba(99,102,241,.13),0 0 0 2px rgba(99,102,241,.08); }
+.node-number { color:#6366f1; }
+.node-label { color:#1e293b; }
+.plane-footer-left,.plane-footer-right { color:#64748b; }
+.footer-fine { color:#94a3b8; }
+.connection-indicator { background:#10b981; }
+.scene-float-label { background:#fff; color:#64748b; border:1px solid #cbd5e1; border-radius:8px; box-shadow:0 8px 24px rgba(30,41,59,.11); }
+.scene-float-label strong { color:#0f172a; }
+.float-tick { background:#6366f1; }
+.float-tick.mint { background:#10b981; }
+
+/* Continuous five-step journey; no stock illustrations or disconnected feature tiles. */
+.journey-section { background:linear-gradient(180deg,#f3f6ff 0%,#f8fafc 100%); border-top:1px solid #e2e8f0; }
+.journey-section:before { background:linear-gradient(#6366f1,transparent); }
+.section-intro h2,.diagnostic-copy h2,.blueprint-copy h2,.workbench-heading h2,.proof-copy h2,.closing-section h2 { color:#0f172a; font-family:var(--display);font-weight:750; }
+.section-intro p,.diagnostic-copy>p,.blueprint-copy>p,.workbench-heading p,.proof-copy>p,.closing-content>p { color:#475569; }
+.muted-heading { color:#64748b; }
+.gradient-green { background:linear-gradient(110deg,#4338ca,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent; }
+.kicker-square { border-color:#6366f1; }
+.mint-square { border-color:#8b5cf6; }
+.journey-connector { background:linear-gradient(90deg,#c7d2fe,#818cf8,#c7d2fe); }
+.step-marker { background:#fff; border:1px solid #d4dcf0; color:#475569;box-shadow:0 9px 26px rgba(79,70,229,.06); }
+.journey-step:hover .step-marker,.journey-step.active .step-marker { background:#eef2ff; border-color:#818cf8; box-shadow:0 10px 28px rgba(99,102,241,.15); }
+.step-symbol { color:#6366f1; }
+.journey-step.active .step-symbol { color:#4338ca; }
+.step-num { color:#6366f1; }
+.step-description { color:#64748b; }
+.journey-caption { border-color:#cbd5e1; }
+.journey-caption-prefix,.journey-caption-count { color:#64748b; }
+.journey-caption-prefix span { color:#4f46e5; }
+.journey-caption strong { color:#334155; }
+
+/* Three-question diagnostic: a readable, trustworthy tool, not a false JRI. */
+.diagnostic-section { background:radial-gradient(circle at 92% 30%,rgba(199,210,254,.32),transparent 45%),#fff; border-top:1px solid #e2e8f0; }
+.diagnostic-meta>span { color:#475569; }
+.meta-ring { border-color:#818cf8; }
+.section-index-mark { color:#edf0fa; }
+.section-index-mark span { color:#94a3b8; }
+.quiz-panel { background:linear-gradient(145deg,#fff,#f8faff); border:1px solid #dbe1f0; border-radius:18px; box-shadow:var(--shadow-card); }
+.quiz-topbar { border-color:#e2e8f0; }
+.quiz-label,.quiz-step-label { color:#64748b; }
+.quiz-step-label { color:#6366f1; }
+.quiz-small-label { color:#64748b; }
+.quiz-track-heading h3 { color:#0f172a; }
+.quiz-change-track { color:#4f46e5; }
+.quiz-track-picker { background:#eef2ff; border-color:#c7d2fe; border-radius:10px; }
+.quiz-track-picker select { color:#0f172a; background:#fff; border:1px solid #cbd5e1; }
+.quiz-progress { background:#e2e8f0; height:5px; border-radius:50px; }
+.quiz-progress>div { background:linear-gradient(90deg,#6366f1,#a78bfa); box-shadow:none; }
+.quiz-q-meta { color:#4338ca; }
+.quiz-q-meta>span:last-child { color:#64748b; }
+.q-meta-divider { background:#cbd5e1; }
+.quiz-panel h4 { color:#0f172a; }
+.quiz-option { background:#fff; border:1px solid #d9e0ec; color:#334155; border-radius:10px; }
+.quiz-option:hover { border-color:#818cf8; background:#f5f3ff; color:#312e81; }
+.quiz-option.is-selected { background:#eef2ff; border-color:#6366f1; color:#312e81; }
+.quiz-option.is-incorrect { border-color:#fca5a5; background:#fef2f2; }
+.quiz-option .choice-letter { background:#f8fafc; color:#475569; border-color:#cbd5e1; }
+.quiz-option.is-selected .choice-letter { color:#4338ca; border-color:#818cf8; }
+.quiz-feedback { color:#047857; }
+.quiz-feedback.is-wrong { color:#b91c1c; }
+.quiz-footer>span { color:#64748b; }
+.quiz-next:disabled { background:#e2e8f0; color:#94a3b8; box-shadow:none; }
+.quiz-result-view h4 { color:#0f172a; }
+.result-orbit { border-color:#c7d2fe; background:#f8faff; }
+.result-orbit:after { border-color:#e0e7ff; }
+.result-score strong { color:#4f46e5; }
+.result-score span { color:#64748b; }
+.quiz-result-view p { color:#475569; }
+.text-action { color:#4338ca; }
+.text-action:hover { color:#6d28d9; }
+.quiz-disclaimer { color:#64748b; }
+
+/* Role-specific, illustrative learning path. */
+.blueprint-section { background:#f1f5fb; border-top:1px solid #e2e8f0; }
+.blueprint-section:after { background:radial-gradient(circle,rgba(196,181,253,.28),transparent 70%); }
+.blueprint-role-badge { border-color:#c7d2fe; background:#fff; color:#1e293b; border-radius:10px; box-shadow:0 5px 18px rgba(99,102,241,.07); }
+.badge-icon,.badge-crosshair { color:#6366f1; }
+.preview-disclaimer { color:#64748b; }
+.roadmap-console { border:1px solid #d6deed; border-radius:16px; background:#fff; box-shadow:var(--shadow-card); }
+.roadmap-console:before { border-color:rgba(99,102,241,.15); }
+.roadmap-console-top,.roadmap-console-footer { border-color:#e2e8f0; color:#64748b; }
+.roadmap-console-top>span:first-child { color:#334155; }
+.roadmap-lanes:before { background:linear-gradient(#6366f1,#c7d2fe); }
+.roadmap-lane { border-color:#eef2f7; }
+.lane-node { background:#f8fafc; border-color:#cbd5e1; }
+.lane-node span { color:#64748b; }
+.roadmap-lane.current .lane-node { background:#eef2ff; border-color:#6366f1; box-shadow:0 5px 14px rgba(99,102,241,.12); }
+.roadmap-lane.current .lane-node span { color:#4f46e5; }
+.lane-eyebrow { color:#6366f1; }
+.lane-body h3 { color:#0f172a; }
+.lane-body p { color:#64748b; }
+.lane-state { color:#4338ca; border-color:#c7d2fe; background:#eef2ff; border-radius:6px; }
+.lane-symbol { color:#94a3b8; }
+.tiny-grid-mark { color:#6366f1; }
+
+/* Real engineering UI, kept as a code review surface rather than promotional copy. */
+.workbench-section { background:linear-gradient(180deg,#fff,#f8fafc);border-top:1px solid #e2e8f0; }
+.workbench-window { background:#fff; border:1px solid #d7deef;border-radius:16px;box-shadow:0 28px 70px -35px rgba(67,56,202,.29),0 8px 22px rgba(15,23,42,.05); }
+.window-topbar { border-color:#e2e8f0; color:#475569; background:#f8fafc; }
+.window-muted { color:#94a3b8; }
+.window-example-pill { color:#4338ca; border-color:#c7d2fe; background:#eef2ff; border-radius:8px; }
+.window-editor { background:linear-gradient(180deg,#fff,#f8fafc); border-right:1px solid #e2e8f0; }
+.editor-file { border-color:#e2e8f0; color:#334155; }
+.git-branch-icon { color:#6366f1; }
+.editor-branch { color:#64748b; }
+.code-line { color:#334155; }
+.code-line>span { color:#94a3b8; }
+.code-line em { color:#7c3aed; }
+.code-line b { color:#0369a1; }
+.code-line strong { color:#047857; }
+.code-line-added { background:#ecfdf5; color:#166534; border-left-color:#10b981; }
+.editor-bottom { border-color:#e2e8f0; color:#64748b; }
+.editor-git { color:#047857; }
+.editor-git span { color:#94a3b8; }
+.window-review { background:linear-gradient(150deg,#f8faff,#f1f5ff); }
+.review-header { color:#64748b; }
+.merged-pill { background:#ecfdf5; border-color:#a7f3d0; color:#047857; border-radius:7px; }
+.window-review h3 { color:#0f172a; }
+.window-review>p { color:#64748b; }
+.review-checks { border-color:#e2e8f0; }
+.review-checks>div { border-color:#e2e8f0; color:#334155; }
+.check-icon,.review-checks>div>span:last-child { color:#059669; }
+.review-note { background:#eef2ff; border:1px solid #c7d2fe; border-radius:10px; }
+.review-note-star { color:#6366f1; }
+.review-note>span:last-child { color:#475569; }
+.review-note strong { color:#1e293b; }
+.workbench-footnote { color:#64748b; }
+
+/* Verified capability — physical stack of certificates/proof, not fake placement statistics. */
+.proof-section { background:#f1f5fb; border-top:1px solid #e2e8f0; }
+.proof-tagline { color:#6366f1; }
+.proof-line { background:#818cf8; }
+.evidence-guide { border-color:#c7d2fe; }
+.evidence-card { border:1px solid #d5ddef; border-radius:13px; box-shadow:0 18px 46px rgba(54,63,120,.14),inset 0 1px 0 #fff; }
+.evidence-card:hover { box-shadow:0 23px 51px rgba(79,70,229,.18); }
+.evidence-one { background:linear-gradient(135deg,#fff,#e0e7ff); }
+.evidence-two { background:linear-gradient(135deg,#fff,#ede9fe); }
+.evidence-three { background:linear-gradient(135deg,#eef2ff,#dbeafe); border-color:#a5b4fc; }
+.evidence-card>div:nth-child(2)>span { color:#64748b; }
+.evidence-card strong { color:#1e293b; }
+.evidence-mini-icon { color:#6366f1; border-color:#c7d2fe; background:rgba(255,255,255,.75); }
+.evidence-three .evidence-mini-icon { color:#4338ca; border-color:#a5b4fc; }
+.evidence-corner { color:#818cf8; }
+.evidence-note { color:#64748b; }
+
+/* Closing message: strong contrast with a soft branded halo, no dramatic dark void. */
+.closing-section { background:radial-gradient(ellipse at 50% 62%,rgba(199,210,254,.54),transparent 70%),#fff; border-top:1px solid #e2e8f0; }
+.closing-orbit>div,.closing-orbit>div:nth-child(2),.closing-orbit>div:nth-child(3) { border-color:rgba(99,102,241,.12); }
+.closing-content>p { color:#475569; }
+.closing-fineprint { color:#64748b; }
+.footer { background:#fff; border-top:1px solid #e2e8f0; }
+.footer-inner>span,.footer-inner>a:last-child { color:#64748b; }
+.legal-note { color:#64748b; }
+
+@media(max-width:900px){
+  .hero-inner { padding-top:68px; }
+  .hero-visual { margin-top:8px; }
+}
+@media(max-width:620px){
+  .hero-inner { padding-top:34px; }
+  .eyebrow { font-size:9px; letter-spacing:.85px; }
+  .hero h1 { font-size:clamp(51px,11.7vw,69px); margin:20px 0 18px; font-weight:800; }
+  .hero-lede { font-size:14px; line-height:1.58; margin-bottom:24px; }
+  .choose-role-heading { font-size:9px; margin-bottom:10px; }
+  .role-chip { min-height:41px; font-size:11px; padding:10px 12px; }
+  .hero-actions { margin-top:20px; gap:12px; }
+  .hero-actions .button-primary { min-height:45px; }
+  .microcopy { margin-top:10px; font-size:10px; }
+  .hero-visual { margin-top:7px; height:390px; transform:translateX(90px) scale(.69); }
+  .section-pad { padding-top:94px; padding-bottom:94px; }
+  .section-intro h2,.diagnostic-copy h2,.blueprint-copy h2,.workbench-heading h2,.proof-copy h2 { letter-spacing:-.055em; }
+  .step-marker { border-radius:14px; }
+}
+@media(max-width:380px){
+  .hero h1 { font-size:49px; }
+  .hero-visual { height:360px; transform:translateX(110px) scale(.61); }
+  .role-chip { padding:10px; }
+}
+@media(prefers-reduced-motion:reduce){
+  .role-core,.scene-plane,.skill-node { transition:none!important; }
+}
+@media(max-width:360px){
+  .hero h1 { font-size:43px; }
+  .hero-visual { height:330px; transform:translateX(125px) scale(.55); }
+}

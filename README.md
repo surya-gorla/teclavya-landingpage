@@ -34,11 +34,18 @@ The project is intentionally dependency-free: semantic HTML, CSS 3D/2.5D, inline
 ## Technical notes
 
 - `index.html`: semantic document and layout.
-- `styles.css`: design tokens, responsive composition, CSS 3D/layering and motion.
+- `styles.css`: original responsive composition, CSS 3D/layering and motion.
+- `teclavya-light.css`: **current presentation theme**. Uses authenticated Teclavya Web light UI tokens (soft slate canvas, white cards, indigo-to-purple actions, Inter + Plus Jakarta Sans font stacks). It sits after the base stylesheet to keep the model behavior unchanged.
 - `app.js`: career registry, interactive skills, guest quiz, journey state.
 - `favicon.svg`: provisional concept mark, **not an official Teclavya brand asset**.
 
 The guest career mapping is intentionally local to the preview. Integration into the original Teclavya Web must normalize its career slugs and use authoritative readiness sources. The 3-question demonstration is not a substitute for production assessment infrastructure.
+
+## Design review / hook
+
+The first screen presents the outcome promise, a career selection control, and a visible interactive capability model. The primary CTA says **Try the 60-second check** and the adjacent copy emphasizes **three questions / no account required**. The user can then experience the complete five-stage journey.
+
+The palette follows `Teclavya/teclavya-web` authenticated design tokens in `src/index.css` and `src/styles/warm-theme.css`, rather than the separate dark public landing aesthetic. Original concept branding is retained and is not represented as the official Teclavya logo.
 
 ## Visual QA targets
 
