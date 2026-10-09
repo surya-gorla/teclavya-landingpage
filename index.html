@@ -67,7 +67,7 @@
               <p class="microcopy"><span class="micro-check">✓</span> 3 questions <span class="micro-separator">/</span> No account required</p>
             </div>
 
-            <div class="hero-visual" aria-label="Interactive career capability blueprint. Choose a career to change its five skill modules.">
+            <div class="hero-visual" role="group" aria-label="Interactive career blueprint: goal, five capabilities, example workplace practice, and example reviewable evidence.">
               <div class="scene-glow" aria-hidden="true"></div>
               <div class="scene-coordinate scene-coordinate-top" aria-hidden="true">CAREER ARCHITECTURE // 001</div>
               <div class="blueprint-scene" id="blueprint-scene">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="scene-plane scene-plane-middle" aria-hidden="true"><span>02 / PRACTICE</span><div class="practice-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
                 <div class="scene-plane scene-plane-main">
-                  <div class="scene-topline"><span class="scene-tag"><span class="mini-orbit"></span> YOUR CAREER BLUEPRINT</span><span class="scene-index">01 / 03</span></div>
+                  <div class="scene-topline"><span class="scene-tag"><span class="mini-orbit"></span> 01 / CAPABILITIES</span><span class="scene-index">FIVE CORE SKILLS</span></div>
                   <div class="scene-grid" aria-hidden="true"></div>
                   <svg class="circuit-lines" viewBox="0 0 460 390" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><defs><linearGradient id="wire" x1="0" x2="1"><stop offset="0" stop-color="#9ba7ba" stop-opacity=".35"/><stop offset=".5" stop-color="#a9f5cb" stop-opacity=".65"/><stop offset="1" stop-color="#929cff" stop-opacity=".35"/></linearGradient></defs><path d="M228 192L100 98M228 192L362 91M228 192L381 235M228 192L110 300M228 192L263 326" stroke="url(#wire)" stroke-width="1.4" stroke-dasharray="4 7" fill="none"/><circle cx="228" cy="192" r="116" fill="none" stroke="#b9c6dc" stroke-opacity=".1" stroke-dasharray="3 10"/></svg>
                   <div class="core-orbit orbit-outer" aria-hidden="true"></div>
@@ -88,18 +88,24 @@
                     <span class="core-glyph" id="core-glyph" aria-hidden="true">&lt;/&gt;</span>
                     <span class="core-abbrev" id="core-abbrev">JAVA</span>
                   </div>
+                  <div class="scene-skill-strip" role="group" aria-label="Career capabilities; select a skill to see its use">
                   <button type="button" class="skill-node skill-node-1 is-active" data-skill-index="0" aria-label="Explore skill one"><span class="node-number">01</span><span class="node-label">Java</span></button>
                   <button type="button" class="skill-node skill-node-2" data-skill-index="1" aria-label="Explore skill two"><span class="node-number">02</span><span class="node-label">Spring Boot</span></button>
                   <button type="button" class="skill-node skill-node-3" data-skill-index="2" aria-label="Explore skill three"><span class="node-number">03</span><span class="node-label">Databases</span></button>
                   <button type="button" class="skill-node skill-node-4" data-skill-index="3" aria-label="Explore skill four"><span class="node-number">04</span><span class="node-label">Testing</span></button>
                   <button type="button" class="skill-node skill-node-5" data-skill-index="4" aria-label="Explore skill five"><span class="node-number">05</span><span class="node-label">Architecture</span></button>
+                  </div>
                   <span class="plane-footer-left">SKILL NETWORK <span class="footer-fine">/ PREVIEW</span></span>
                   <span class="plane-footer-right">05 NODES CONNECTED <span class="connection-indicator"></span></span>
                 </div>
               </div>
               <div class="scene-float-label scene-float-top"><span class="float-tick"></span> GOAL <strong id="scene-role-title">Java Backend Engineer</strong></div>
-              <div class="scene-float-label scene-float-bottom"><span class="float-tick mint"></span> FOCUS <strong id="scene-skill-focus">Java foundations</strong></div>
-              <div class="scene-coordinate scene-coordinate-bottom" aria-hidden="true">A MODEL OF WHAT YOU'LL MASTER <span>↗</span></div>
+              <div class="scene-stage-flow" role="group" aria-live="polite" aria-atomic="true" aria-label="Illustrative role-specific work and evidence">
+                <div class="scene-stage-cell scene-stage-practice"><span class="stage-number">02</span><div class="scene-stage-copy"><span class="stage-eyebrow">PRACTICE / EXAMPLE</span><strong id="scene-practice-task">Build and test a resilient REST API</strong><strong class="stage-brief" id="scene-practice-brief">Resilient REST API</strong></div></div>
+                <span class="scene-stage-arrow" aria-hidden="true">→</span>
+                <div class="scene-stage-cell scene-stage-evidence"><span class="stage-number">03</span><div class="scene-stage-copy"><span class="stage-eyebrow">EVIDENCE / EXAMPLE</span><strong id="scene-evidence-artifact">Reviewed PR and test results</strong><strong class="stage-brief" id="scene-evidence-brief">Reviewed PR + API tests</strong></div></div>
+              </div>
+              <div class="scene-skill-instruction"><span>Select a skill to see where it is used</span><span><strong id="scene-skill-focus">Java foundations</strong><span class="instruction-divider">·</span><span id="scene-skill-use">Design reliable endpoints</span></span></div>
             </div>
           </div>
           <div class="container hero-bottom">
@@ -150,7 +156,7 @@
         <section class="workbench-section section-pad" id="workbench" aria-labelledby="workbench-title">
           <div class="container"><div class="workbench-heading reveal"><div><span class="section-kicker"><span class="kicker-square mint-square"></span> LEARN BY DOING</span><h2 id="workbench-title">Less watching.<br/><span class="gradient-green">More building.</span></h2></div><p>The real workflow becomes the classroom.</p></div>
             <div class="workbench-window reveal"><div class="window-topbar"><div class="window-lights"><i></i><i></i><i></i></div><span>WORKPLACE SIMULATION <span class="window-muted">/ ENGINEERING LAB</span></span><span class="window-example-pill">ILLUSTRATIVE PREVIEW</span></div>
-              <div class="window-main"><div class="window-editor"><div class="editor-file"><span class="git-branch-icon">⑂</span> <span id="work-project-name">resilient-api</span><span class="editor-branch">feature/request-retry ↗</span></div><div class="code-lines" aria-label="Illustrative code diff"><div class="code-line"><span>01</span><code><em>const</em> request = <b>async</b> (options) =&gt; {</code></div><div class="code-line"><span>02</span><code>&nbsp; <em>const</em> response = <b>await</b> fetch(options);</code></div><div class="code-line code-line-added"><span>03</span><code><strong>+</strong>&nbsp; <em>if</em> (response.status === 503) {</code></div><div class="code-line code-line-added"><span>04</span><code><strong>+</strong>&nbsp; &nbsp; <b>return</b> retryWithBackoff(options);</code></div><div class="code-line code-line-added"><span>05</span><code><strong>+</strong>&nbsp; }</code></div><div class="code-line"><span>06</span><code>&nbsp; <b>return</b> response;</code></div><div class="code-line"><span>07</span><code>};</code></div></div><div class="editor-bottom"><span class="editor-git">+3 lines <span>−0 removed</span></span><span>CODE REVIEW · SAMPLE</span></div></div>
+              <div class="window-main"><div class="window-editor"><div class="editor-file"><span class="git-branch-icon">⑂</span> <span id="work-project-name">resilient-api</span><span class="editor-branch">feature/request-retry ↗</span></div><div class="code-lines" role="group" aria-label="Illustrative code diff"><div class="code-line"><span>01</span><code><em>const</em> request = <b>async</b> (options) =&gt; {</code></div><div class="code-line"><span>02</span><code>&nbsp; <em>const</em> response = <b>await</b> fetch(options);</code></div><div class="code-line code-line-added"><span>03</span><code><strong>+</strong>&nbsp; <em>if</em> (response.status === 503) {</code></div><div class="code-line code-line-added"><span>04</span><code><strong>+</strong>&nbsp; &nbsp; <b>return</b> retryWithBackoff(options);</code></div><div class="code-line code-line-added"><span>05</span><code><strong>+</strong>&nbsp; }</code></div><div class="code-line"><span>06</span><code>&nbsp; <b>return</b> response;</code></div><div class="code-line"><span>07</span><code>};</code></div></div><div class="editor-bottom"><span class="editor-git">+3 lines <span>−0 removed</span></span><span>CODE REVIEW · SAMPLE</span></div></div>
               <div class="window-review"><div class="review-header"><span>PR #042</span><span class="merged-pill">✓ REVIEWED</span></div><h3>Improve request resilience</h3><p>Sample pull request · practice environment</p><div class="review-checks"><div><span class="check-icon">✓</span> Tests passing <span>14/14</span></div><div><span class="check-icon">✓</span> CI build <span>PASS</span></div><div><span class="check-icon">✓</span> Code review <span>DONE</span></div></div><div class="review-note"><span class="review-note-star">✳</span><span>AI REVIEW NOTE<br/><strong>Consider exponential backoff with a retry cap.</strong></span></div></div></div>
             </div><div class="workbench-footnote reveal"><span>REAL SKILLS ARE BUILT IN REAL WORKFLOWS</span><span>CODE → TEST → REVIEW → IMPROVE</span></div>
           </div>
@@ -160,7 +166,7 @@
 
         <section class="closing-section" id="start-journey"><div class="container closing-content reveal"><div class="closing-orbit" aria-hidden="true"><div></div><div></div><div></div></div><span class="section-kicker"><span class="kicker-square mint-square"></span> THIS IS YOUR STARTING LINE</span><h2>A career isn't watched.<br/><span class="gradient-green">It's built.</span></h2><p>Find your starting point. We'll show you the shape of what's next.</p><a class="button button-primary button-large" href="#diagnostic">Start with 60 seconds <span class="button-arrow" aria-hidden="true">↗</span></a><span class="closing-fineprint">NO LOGIN · NO PRESSURE · JUST A DIRECTION</span></div></section>
       </main>
-      <footer class="footer"><div class="container footer-inner"><a class="brand brand-footer" href="#top" aria-label="Teclavya home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M6 27.5V8.5H29.5" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M14 28V16H26" stroke="#6366F1" stroke-width="3.5" stroke-linejoin="round"/><path d="M21.5 27.5L29.5 19.5" stroke="currentColor" stroke-width="3.5"/></svg></span><span>Teclavya</span></a><span>CAREER-READINESS EXPERIENCE / DESIGN CONCEPT</span><a href="#top">BACK TO TOP ↑</a></div><div class="container"><p class="legal-note">Independent interactive design preview. Sample projects, scores and outcomes are illustrative; this is not the production Teclavya platform.</p></div></footer>
+      <footer class="footer"><div class="container footer-inner"><a class="brand brand-footer" href="#top" aria-label="Teclavya home"><span class="brand-mark" aria-hidden="true"><img class="brand-image" src="./assets/teclavya-logo.png" alt="" width="34" height="34" loading="lazy" decoding="async" /></span><span>Teclavya</span></a><span>CAREER-READINESS EXPERIENCE / DESIGN CONCEPT</span><a href="#top">BACK TO TOP ↑</a></div><div class="container"><p class="legal-note">Independent interactive design preview. Sample projects, scores and outcomes are illustrative; this is not the production Teclavya platform.</p></div></footer>
     </div>
   </body>
 </html>

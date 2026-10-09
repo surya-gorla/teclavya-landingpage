@@ -333,3 +333,153 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 3px solid
 .brand-mark {width:38px;height:38px;border-radius:10px;overflow:hidden;background:#fff;flex:none;}
 .brand-image {display:block;width:100%;height:100%;object-fit:contain;}
 @media(max-width:620px) {.brand-mark{width:34px;height:34px;}}
+/* =========================================================
+   Blueprint + hook V2: semantic depth, not additional cards.
+   The six role / diagnostic IDs remain unchanged.
+   ========================================================= */
+.scene-skill-strip { display:contents; }
+.scene-plane-main { overflow:visible; }
+.scene-stage-flow {
+  position:absolute; z-index:8; bottom:46px; left:43px; right:0;
+  min-height:79px; display:flex; align-items:stretch; gap:0;
+  border:1px solid #c7d2fe; border-radius:12px;
+  background:linear-gradient(110deg,rgba(255,255,255,.98),rgba(248,249,255,.99));
+  box-shadow:0 17px 32px rgba(67,56,202,.13),inset 0 1px 0 #fff;
+}
+.scene-stage-flow::before {
+  content:"";position:absolute;bottom:100%;left:28%;height:17px;
+  border-left:1px dashed #818cf8;
+}
+.scene-stage-cell {display:flex;flex:1;min-width:0;align-items:center;gap:10px;padding:12px 12px 12px 15px;}
+.stage-number {font:800 10px var(--mono);color:#4f46e5;background:#eef2ff;border:1px solid #c7d2fe;border-radius:6px;padding:7px 7px;flex-shrink:0;}
+.scene-stage-copy {display:flex;flex-direction:column;min-width:0;gap:5px;}
+.stage-eyebrow {font:750 9px var(--mono);color:#475569;letter-spacing:.5px;}
+.scene-stage-copy strong {color:#1e293b;font:700 11px/1.35 var(--sans);letter-spacing:-.03px;max-width:210px;}
+.scene-stage-practice {background:linear-gradient(130deg,rgba(238,242,255,.8),transparent);border-radius:12px 0 0 12px;}
+.scene-stage-evidence {border-radius:0 12px 12px 0;background:rgba(248,250,252,.8);}
+.scene-stage-arrow {align-self:center;flex:none;position:relative;color:#4f46e5;background:#fff;border:1px solid #c7d2fe;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font:700 15px var(--sans);margin:0 -12px;z-index:1;}
+.scene-skill-instruction {
+  position:absolute; z-index:7; bottom:11px;left:45px;right:0;
+  display:flex;justify-content:space-between;align-items:center;gap:9px;
+  font:600 10px/1.4 var(--sans); color:#475569;
+}
+.scene-skill-instruction>span:first-child {font-weight:650;color:#4338ca;}
+.scene-skill-instruction>span:last-child {text-align:right;}
+.scene-skill-instruction strong {font-weight:750;color:#334155;}
+.instruction-divider {margin:0 6px;color:#94a3b8;}
+.scene-float-top {top:58px;right:22px;}
+.scene-coordinate-bottom {display:none;}
+.scene-topline {padding:0 20px;}
+.scene-tag,.scene-index {font-size:10px;letter-spacing:.7px;}
+.plane-footer-left {color:#475569;}
+.skill-node[aria-pressed="true"] {border-color:#6366f1;box-shadow:0 11px 24px rgba(99,102,241,.15),0 0 0 2px rgba(99,102,241,.11);}
+.skill-node:focus-visible {outline:3px solid #4f46e5;outline-offset:4px;}
+.scene-stage-cell [id] {overflow-wrap:anywhere;}
+
+/* Confirmed axe text contrast failures in the baseline: these are semantic labels. */
+.window-muted {color:#475569;}
+.code-line-added.code-line>span {color:#334155;}
+.proof-tagline {color:#4338ca;}
+
+/* A quieter "interactive concept" tag, without removing disclosure. */
+.concept-pill {font-size:8px;letter-spacing:.55px;opacity:.72;}
+.brand-footer .brand-mark {height:34px;width:34px;}
+#quiz-question-text {scroll-margin-top:96px;}
+
+/* Compact blueprint state: no shrinking of the desktop geometry or its text. */
+@media(max-width:900px) {
+  .hero-inner {padding-top:44px;}
+  .hero-copy {padding-bottom:0;}
+  .hero-visual {width:100%;height:262px;margin:17px auto 0;transform:none;justify-self:stretch;align-self:stretch;overflow:visible;}
+  .scene-glow {inset:-15px 0;filter:blur(15px);opacity:.5;}
+  .scene-coordinate,.hero-visual::before,.hero-visual::after {display:none;}
+  .blueprint-scene {position:relative;inset:auto;transform:none!important;height:100%;perspective:none;}
+  .scene-plane {border-radius:12px;}
+  .scene-plane-back {top:45px;left:12px;right:2px;height:125px;transform:rotate(1.4deg);opacity:.7;}
+  .scene-plane-middle {top:40px;left:6px;right:8px;height:121px;transform:rotate(-.8deg);opacity:.8;}
+  .scene-plane-main {top:35px;left:0;right:0;height:127px;transform:rotate(-.6deg);overflow:hidden;box-shadow:0 13px 30px rgba(79,70,229,.14),inset 0 1px 0 #fff;}
+  .scene-topline {height:43px;padding:0 17px;}
+  .scene-grid {inset:43px 0 0;opacity:.4;}
+  .role-core,.core-orbit,.circuit-lines,.plane-footer-left,.plane-footer-right {display:none;}
+  .scene-skill-strip {display:flex;position:absolute;left:11px;right:11px;top:50px;height:68px;gap:7px;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#a5b4fc transparent;scroll-snap-type:x proximity;overscroll-behavior-x:contain;padding:2px 2px 8px;}
+  .scene-skill-strip>.skill-node {position:relative!important;top:auto!important;bottom:auto!important;left:auto!important;right:auto!important;transform:none!important;flex:0 0 112px;min-width:112px;min-height:50px;height:50px;max-width:none;padding:7px 9px;border-radius:8px;scroll-snap-align:start;font-size:11px;}
+  .scene-skill-strip>.skill-node .node-number {font-size:9px;}
+  .scene-skill-strip>.skill-node .node-label {font-size:11px;line-height:1.15;}
+  .scene-float-top {top:0;left:0;right:auto;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:none;background:#eef2ff;border:1px solid #c7d2fe;padding:8px 10px;font-size:9px;}
+  .scene-float-top strong {max-width:calc(100vw - 155px);overflow:hidden;text-overflow:ellipsis;}
+  .scene-stage-flow {bottom:32px;top:auto;left:0;right:0;min-height:66px;border-radius:10px;}
+  .scene-stage-flow::before {height:13px;left:22%;}
+  .scene-stage-cell {padding:8px 11px;gap:8px;}
+  .stage-number {font-size:9px;padding:5px 6px;}
+  .stage-eyebrow {font-size:9px;letter-spacing:.3px;}
+  .scene-stage-copy strong {font-size:11px;line-height:1.25;max-width:none;}
+  .scene-skill-instruction {left:0;right:0;bottom:0;font-size:10px;}
+  .scene-skill-instruction>span:first-child {white-space:nowrap;}
+  .scene-skill-instruction>span:last-child {min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .hero-bottom {height:38px;}
+  .hero-bottom>span {font-size:9px;}
+  .diagnostic-section {padding-top:66px;}
+}
+@media(max-width:620px) {
+  .hero-inner {padding-top:25px;}
+  .hero h1 {font-size:clamp(36px,10vw,47px);line-height:1.10;margin:13px 0 13px;}
+  .hero-lede {margin-bottom:14px;line-height:1.42;font-size:14px;}
+  .choose-role-heading {margin-bottom:8px;}
+  .role-controls {gap:6px;}
+  .role-chip {min-height:44px;padding:10px 10px;font-size:11px;}
+  .hero-actions {margin-top:13px;gap:7px;}
+  .hero-actions .button-primary {min-height:46px;}
+  .microcopy {margin-top:8px;}
+  .hero-visual {height:237px;margin:12px auto 0;}
+  .scene-float-top strong {max-width:calc(100vw - 135px);}
+  .scene-plane-back {height:116px;}
+  .scene-plane-middle {height:114px;}
+  .scene-plane-main {height:119px;}
+  .scene-skill-strip {height:60px;top:49px;}
+  .scene-stage-flow {bottom:28px;min-height:67px;}
+  .scene-stage-cell {padding:7px 7px;gap:5px;}
+  .stage-number {padding:4px;font-size:9px;}
+  .stage-eyebrow {font-size:8px;}
+  .scene-stage-copy strong {font-size:10px;line-height:1.22;}
+  .scene-stage-arrow {width:20px;height:20px;font-size:13px;margin:0 -10px;}
+  .scene-skill-instruction {display:flex;align-items:center;gap:5px;font-size:9px;}
+  .scene-skill-instruction>span:first-child {max-width:150px;white-space:normal;line-height:1.1;}
+  .scene-skill-instruction>span:last-child {max-width:150px;}
+  .hero-bottom {height:27px;}
+  .hero-bottom>span {font-size:8px;letter-spacing:.3px;}
+  #quiz-question-text {scroll-margin-top:90px;}
+}
+@media(max-width:380px) {
+  .hero h1 {font-size:clamp(34px,10vw,39px);}
+  .hero-actions .hero-link {margin-top:1px;}
+  .hero-visual {height:225px;}
+  .scene-stage-flow {min-height:67px;bottom:26px;}
+  .scene-stage-cell {gap:4px;padding:6px;}
+  .scene-stage-copy strong {font-size:10px;}
+}
+
+
+/* Compact semantic caption polish from 320 through 620px. */
+.stage-brief {display:none;}
+@media(max-width:620px){
+ .scene-stage-copy strong:not(.stage-brief) {display:none;}
+ .scene-stage-copy .stage-brief {display:block;font-size:11px;line-height:1.25;font-weight:750;}
+ .scene-stage-cell {gap:7px;}
+ .hero-visual {height:260px;}
+ .scene-stage-flow {bottom:44px;}
+ .scene-skill-instruction {flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:3px;bottom:2px;line-height:1.1;font-size:9px;}
+ .scene-skill-instruction>span:first-child {max-width:100%;white-space:nowrap;}
+ .scene-skill-instruction>span:last-child {max-width:100%;white-space:nowrap;text-align:left;font-size:10px;overflow:hidden;text-overflow:ellipsis;}
+ .scene-tag {white-space:nowrap;font-size:9px;letter-spacing:.3px;gap:5px;}
+ .scene-index {font-size:8px;letter-spacing:.3px;white-space:nowrap;}
+ .hero-bottom {height:22px;}
+}
+@media(max-width:380px){
+ .hero-visual {height:248px;}
+ .scene-stage-flow {bottom:43px;}
+ .hero-bottom {height:23px;}
+}
+
+/* Small but informative technical text should remain comfortably readable. */
+.window-muted {font-size:10px;}
+.proof-tagline {font-size:11px;}

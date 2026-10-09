@@ -59,3 +59,13 @@ Created as a standalone concept preview for discussion with the Teclavya team. P
 ## Conversion and visual-fidelity refinements (2026-10-10)
 
 The standalone preview follows the authenticated Teclavya light design tokens rather than the CEO's separately certified dark *public* homepage. The main hero now leads with the exact career outcome in Issue #49 while the signature interactive blueprint remains. The 60-second diagnostic appears immediately after the hero, followed by a role-specific sample path; all results remain illustrative, not validated job-readiness claims. See `research/first-impression-study.md` for the prospective-student validation protocol. No student testing or conversion uplift is claimed.
+
+## V2: evidence-driven blueprint / hook refinement (local-only, not deployed)
+
+V2 makes the three spatial layers semantically meaningful: **GOAL → CAPABILITIES → PRACTICE → EVIDENCE**. Six career definitions now update the selected skill, example workplace task, and corresponding reviewable artifact together. Narrow layouts use a compact horizontally scrollable five-skill strip with readable labels, not a scaled-down desktop diagram.
+
+The primary diagnostic CTA preserves `#diagnostic` in browser history but positions the first actual question and answer in the visible viewport after the jump. No score is presented as calibrated job-readiness. The authentic header and footer logo paths both refer to `assets/teclavya-logo.png`, already tracked in the source GitHub repository.
+
+See `research/role-id-crosswalk.md` for intentional slug aliases and incompatible pre-signup journey mapping in Teclavya Web. The standalone concept's existing six IDs remain unchanged.
+
+QA is packaged separately in `teclavya-blueprint-hook-v2` with screenshots and scripts. The 134 local browser assertions and computed-contrast checks do not constitute full axe/WCAG certification or human-participant evidence.

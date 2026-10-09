@@ -8,6 +8,9 @@ const CAREERS = {
     skills: ['Java', 'Spring Boot', 'Databases', 'Testing', 'Architecture'],
     skillFocus: ['Java foundations', 'Spring-based APIs', 'Relational data models', 'Reliable testing', 'System architecture'],
     foundation: 'Java · Databases · API design', practice: 'Build and test a resilient REST API', project: 'resilient-api',
+    heroPracticeBrief: 'Resilient REST API', heroEvidenceBrief: 'Reviewed PR + API tests',
+    heroPractice: 'Build and test a resilient REST API', heroEvidence: 'Reviewed PR and automated API tests',
+    skillUse: ['Design typed endpoints', 'Expose reliable REST handlers', 'Model persistent API data', 'Prove endpoints through tests', 'Review service boundaries'],
     questions: [
       { category: 'JAVA FUNDAMENTALS', text: 'What does the Java Virtual Machine execute?', options: ['TypeScript source', 'Java bytecode', 'SQL queries', 'HTML templates'], correct: 1, why: 'The JVM executes compiled Java bytecode.' },
       { category: 'SPRING BOOT', text: 'Which Spring annotation typically exposes a REST controller?', options: ['@RestController', '@Entity', '@Transactional', '@Repository'], correct: 0, why: '@RestController combines controller handling with response-body serialization.' },
@@ -19,6 +22,9 @@ const CAREERS = {
     skills: ['Linux', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD'],
     skillFocus: ['Linux operations', 'Container foundations', 'Cluster orchestration', 'Infrastructure as code', 'Delivery pipelines'],
     foundation: 'Linux · Cloud · Containers', practice: 'Deploy a resilient service with Kubernetes', project: 'cloud-service',
+    heroPracticeBrief: 'Kubernetes rollout', heroEvidenceBrief: 'CI + deploy checks',
+    heroPractice: 'Deploy a service on Kubernetes', heroEvidence: 'Passing CI and deployment checks',
+    skillUse: ['Operate Linux services', 'Package reproducible containers', 'Manage a resilient rollout', 'Version cloud infrastructure', 'Verify builds and deployment'],
     questions: [
       { category: 'CONTAINERS', text: 'What distinguishes a container from a traditional virtual machine?', options: ['It needs no network', 'It shares the host OS kernel', 'It always runs on Windows', 'It must contain a full guest OS'], correct: 1, why: 'Containers share the host operating-system kernel rather than booting a full guest OS.' },
       { category: 'KUBERNETES', text: 'What maintains the desired number of application pod replicas?', options: ['ConfigMap', 'Ingress', 'Deployment', 'Secret'], correct: 2, why: 'A Deployment manages replica sets to reach and maintain the desired pod count.' },
@@ -30,6 +36,9 @@ const CAREERS = {
     skills: ['Python', 'Data', 'Models', 'Evaluation', 'Deployment'],
     skillFocus: ['Python workflows', 'Data preparation', 'Model development', 'Quality evaluation', 'Production inference'],
     foundation: 'Python · Data · Statistics', practice: 'Build and evaluate an inference pipeline', project: 'inference-service',
+    heroPracticeBrief: 'Evaluation pipeline', heroEvidenceBrief: 'Experiment report',
+    heroPractice: 'Build an evaluation pipeline', heroEvidence: 'Reproducible experiment report',
+    skillUse: ['Write reliable data workflows', 'Prepare representative datasets', 'Train and compare models', 'Measure quality on held-out data', 'Version an inference release'],
     questions: [
       { category: 'MODEL BEHAVIOR', text: 'A model performs well on training data but poorly on new data. What is this?', options: ['Overfitting', 'Normalization', 'Quantization', 'Embedding'], correct: 0, why: 'Overfitting occurs when a model learns training specifics instead of patterns that generalize.' },
       { category: 'DATA PIPELINE', text: 'Why separate training data from evaluation data?', options: ['To avoid writing tests', 'To assess generalization', 'To make labels invisible', 'To reduce CPU usage'], correct: 1, why: 'Held-out data provides a more honest estimate of performance on unseen examples.' },
@@ -41,6 +50,9 @@ const CAREERS = {
     skills: ['TypeScript', 'APIs', 'Databases', 'Testing', 'Systems'],
     skillFocus: ['Typed programming', 'Service integration', 'Data modeling', 'Quality engineering', 'System thinking'],
     foundation: 'Programming · APIs · Data', practice: 'Ship and test a full-stack feature', project: 'fullstack-app',
+    heroPracticeBrief: 'Full-stack feature', heroEvidenceBrief: 'Reviewed PR + tests',
+    heroPractice: 'Ship an end-to-end feature', heroEvidence: 'Reviewed feature PR and test suite',
+    skillUse: ['Write type-safe feature logic', 'Connect service endpoints', 'Persist application state', 'Catch regressions early', 'Document system trade-offs'],
     questions: [
       { category: 'DATA STRUCTURES', text: 'Which structure offers average O(1) key lookup?', options: ['Linked list', 'Hash table', 'Binary search tree', 'Queue'], correct: 1, why: 'A hash table provides average constant-time key lookup.' },
       { category: 'HTTP', text: 'What does a successful HTTP 201 response generally mean?', options: ['A resource was created', 'The user is forbidden', 'The server crashed', 'The response is cached forever'], correct: 0, why: '201 Created indicates that the request resulted in creating a resource.' },
@@ -52,6 +64,9 @@ const CAREERS = {
     skills: ['Networks', 'OWASP', 'Identity', 'Detection', 'Response'],
     skillFocus: ['Network fundamentals', 'Application security', 'Access controls', 'Threat detection', 'Incident response'],
     foundation: 'Networks · Security · Identity', practice: 'Review and harden a vulnerable service', project: 'secure-service',
+    heroPracticeBrief: 'Harden auth route', heroEvidenceBrief: 'Security review + tests',
+    heroPractice: 'Harden a vulnerable auth route', heroEvidence: 'Security review and regression tests',
+    skillUse: ['Map the attack surface', 'Identify common web risks', 'Constrain access privileges', 'Inspect suspicious activity', 'Document incident actions'],
     questions: [
       { category: 'WEB SECURITY', text: 'What helps prevent SQL injection in a web application?', options: ['Prepared statements', 'More CSS', 'Longer URLs', 'Disabling HTTPS'], correct: 0, why: 'Parameterized queries keep untrusted input separate from SQL instructions.' },
       { category: 'IDENTITY', text: 'What does the principle of least privilege require?', options: ['Give everyone admin access', 'Grant only required permissions', 'Disable authentication', 'Reuse shared passwords'], correct: 1, why: 'Least privilege limits access to the minimum permissions necessary.' },
@@ -63,6 +78,9 @@ const CAREERS = {
     skills: ['UI', 'State', 'Offline', 'Testing', 'Release'],
     skillFocus: ['Touch-first interfaces', 'App state management', 'Offline-first data', 'Device testing', 'Release readiness'],
     foundation: 'Mobile UI · State · Navigation', practice: 'Build an offline-capable app feature', project: 'offline-mobile-app',
+    heroPracticeBrief: 'Offline app feature', heroEvidenceBrief: 'Device tests + review',
+    heroPractice: 'Build an offline-ready app feature', heroEvidence: 'Device-test report and code review',
+    skillUse: ['Implement accessible mobile UI', 'Keep screens in sync', 'Handle sync and network loss', 'Check behavior on devices', 'Verify release readiness'],
     questions: [
       { category: 'MOBILE EXPERIENCE', text: 'Which design approach allows an app to remain useful without connectivity?', options: ['Server-only rendering', 'Offline-first data design', 'More animations', 'Unbounded polling'], correct: 1, why: 'Offline-first architecture preserves useful state and synchronizes when connectivity returns.' },
       { category: 'STATE', text: 'What does application state represent?', options: ['Only the app icon', 'Device brightness', 'Data that affects current UI behavior', 'Only build output'], correct: 2, why: 'Application state holds the information that determines what the UI displays and how it behaves.' },
@@ -105,9 +123,15 @@ function selectRole(roleId, { resetQuiz = true } = {}) {
     safeTextIn(button, '.node-label', name);
     button.setAttribute('aria-label', `Explore ${name}`);
     button.classList.toggle('is-active', index === 0);
+    button.setAttribute('aria-pressed', String(index === 0));
   });
   safeText('#scene-role-title', data.name);
   safeText('#scene-skill-focus', data.skillFocus[0]);
+  safeText('#scene-skill-use', data.skillUse[0]);
+  safeText('#scene-practice-task', data.heroPractice);
+  safeText('#scene-evidence-artifact', data.heroEvidence);
+  safeText('#scene-practice-brief', data.heroPracticeBrief);
+  safeText('#scene-evidence-brief', data.heroEvidenceBrief);
   safeText('#core-abbrev', data.code);
   safeText('#core-glyph', data.glyph);
   safeText('#roadmap-role-name', data.name);
@@ -243,8 +267,12 @@ function wireInteractions() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMoreMenu(); $('#role-more').focus({ preventScroll: true }); } });
   $$('.skill-node').forEach(button => button.addEventListener('click', () => {
     currentSkill = Number(button.dataset.skillIndex);
-    $$('.skill-node').forEach((node, i) => node.classList.toggle('is-active', i === currentSkill));
+    $$('.skill-node').forEach((node, i) => {
+      node.classList.toggle('is-active', i === currentSkill);
+      node.setAttribute('aria-pressed', String(i === currentSkill));
+    });
     safeText('#scene-skill-focus', CAREERS[currentRole].skillFocus[currentSkill]);
+    safeText('#scene-skill-use', CAREERS[currentRole].skillUse[currentSkill]);
   }));
   $$('.journey-step').forEach(button => button.addEventListener('click', () => setActiveJourneyStep(Number(button.dataset.step))));
   $('#quiz-next').addEventListener('click', nextQuestion);
@@ -260,6 +288,22 @@ function wireInteractions() {
     $('#quiz-track-picker').hidden = true;
     $('#quiz-change-track').setAttribute('aria-expanded', 'false');
   });
+  // Preserve the standard #diagnostic URL, but land on the first usable question.
+  // The section header appears above the quiz on phones; the default hash target
+  // left the question and its answers below the fold at 320px.
+  $$('a[href="#diagnostic"]').forEach(link => link.addEventListener('click', event => {
+    const question = $('#quiz-question-text');
+    if (!question) return;
+    event.preventDefault();
+    if (location.hash !== '#diagnostic') location.hash = 'diagnostic';
+    const header = $('.topbar');
+    const headerOffset = (header ? header.getBoundingClientRect().height : 0) + 24;
+    // Scroll after the hash jump settles; do not autofocus or answer for the visitor.
+    requestAnimationFrame(() => {
+      const top = question.getBoundingClientRect().top + scrollY - headerOffset;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+    });
+  }));
   const hamburger = $('#mobile-menu-toggle');
   hamburger.addEventListener('click', () => {
     const nav = $('#mobile-nav');
