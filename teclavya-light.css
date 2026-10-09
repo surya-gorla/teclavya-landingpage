@@ -23,6 +23,7 @@
   --brand-violet: #7c3aed;
   --brand-hover: #4f46e5;
   --shadow-card: 0 18px 52px -24px rgba(59,65,112,.22),0 5px 18px rgba(99,102,241,.06);
+  --mono: "Fira Code", "SFMono-Regular", Consolas, ui-monospace, monospace;
   --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --display: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
 }
