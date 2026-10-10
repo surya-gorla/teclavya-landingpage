@@ -218,6 +218,8 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 3px solid
 .window-muted { color:#94a3b8; }
 .window-example-pill { color:#4338ca; border-color:#c7d2fe; background:#eef2ff; border-radius:8px; }
 .window-editor { background:linear-gradient(180deg,#fff,#f8fafc); border-right:1px solid #e2e8f0; }
+/* Native keyboard scrolling for the horizontally clipped sample; visible focus, without JS. */
+.code-lines:focus-visible {outline:3px solid #4f46e5;outline-offset:-3px;border-radius:8px;}
 .editor-file { border-color:#e2e8f0; color:#334155; }
 .git-branch-icon { color:#6366f1; }
 .editor-branch { color:#64748b; }
@@ -381,8 +383,8 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 3px solid
 .code-line-added.code-line>span {color:#334155;}
 .proof-tagline {color:#4338ca;}
 
-/* A quieter "interactive concept" tag, without removing disclosure. */
-.concept-pill {font-size:8px;letter-spacing:.55px;opacity:.72;}
+/* Keep the prototype disclosure quiet but fully readable (WCAG normal-text contrast). */
+.concept-pill {font-size:10px;letter-spacing:.55px;opacity:1;color:#475569;}
 .brand-footer .brand-mark {height:34px;width:34px;}
 #quiz-question-text {scroll-margin-top:96px;}
 
